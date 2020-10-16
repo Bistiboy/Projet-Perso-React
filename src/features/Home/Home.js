@@ -15,7 +15,7 @@ const Home = () => {
                     {
                         name: 'Toulouse',
                         location: [39.6044622, 3.4442469],
-                        color: 'accent-3',
+                        color: 'status-warning',
                         onHover: () => {
                             nomPays = 'Toulouse';
                             setActive(!active); 
@@ -24,7 +24,7 @@ const Home = () => {
                     {
                         name: 'Paris',
                         location: [43.8566969, 4.3514616],
-                        color: 'accent-3',
+                        color: 'status-warning',
                         onHover: () => {
                             nomPays = 'Paris';
                             setActive(!active); 
@@ -33,7 +33,7 @@ const Home = () => {
                     {
                         name: 'Montréal',
                         location: [46.4972159, -73.6103642],
-                        color: 'accent-3',
+                        color: 'status-warning',
                         onHover: () => {
                             nomPays = 'Montréal';
                             setActive(!active); 
@@ -42,7 +42,7 @@ const Home = () => {
                     {
                         name: 'Boston',
                         location: [41.3602534, -71.0582912],
-                        color: 'accent-3',
+                        color: 'status-warning',
                         onHover: () => {
                             nomPays = 'Boston';
                             setActive(!active); 
@@ -51,7 +51,7 @@ const Home = () => {
                     {
                         name: 'Nouvelle Orléans',
                         location: [29.9499323, -90.0701156],
-                        color: 'accent-3',
+                        color: 'status-warning',
                         onHover: () => {
                             nomPays = 'Nouvelle Orléans';
                             setActive(!active); 
@@ -60,7 +60,7 @@ const Home = () => {
                     {
                         name: 'Athènes',
                         location: [37.9839412, 23.7283052],
-                        color: 'accent-3',
+                        color: 'status-warning',
                         onHover: () => {
                             nomPays = 'Athènes';
                             setActive(!active); 
@@ -69,7 +69,7 @@ const Home = () => {
                     {
                         name: 'Atlanta',
                         location: [33.7490987, -84.3901849],
-                        color: 'accent-3',
+                        color: 'status-warning',
                         onHover: () => {
                             nomPays = 'Atlanta';
                             setActive(!active); 
@@ -78,7 +78,7 @@ const Home = () => {
                     {
                         name: 'Zagreb',
                         location: [45.8131847, 15.9771774],
-                        color: 'accent-3',
+                        color: 'status-warning',
                         onHover: () => {
                             nomPays = 'Zagreb';
                             setActive(!active); 
