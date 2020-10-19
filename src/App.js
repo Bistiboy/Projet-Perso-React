@@ -1,8 +1,6 @@
 import React from 'react';
 import { Box, Grommet } from 'grommet';
 import Home from './features/Home/Home'
-import CV from './features/CV/CV'
-import Portfolio from './features/Portfolio/Portfolio'
 import Appbar from './features/Appbar/Appbar';
 
 const theme = {
@@ -23,15 +21,6 @@ const App = () => {
     <Grommet theme={theme} full>
       <Box fill>
         <Appbar></Appbar>
-        <Box 
-          direction='row' 
-          flex 
-          overflow={{horizontal:'hidden'}}
-          align='center'
-          justify='center'
-        >
-          <Home></Home>
-        </Box>
       </Box>
     </Grommet>
   );

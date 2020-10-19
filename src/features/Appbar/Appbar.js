@@ -1,6 +1,9 @@
 import React from 'react'
 import { Box, Button, Heading } from 'grommet'
 import { Bookmark, Clipboard } from 'grommet-icons'
+import CV from '../CV/CV'
+import Portfolio from '../Portfolio/Portfolio'
+import Home from '../Home/Home'
 import {
     BrowserRouter as Router,
     Switch,
@@ -22,32 +25,50 @@ const AppBar = (props) => (
     />
 );
 
-const Portfolio = "<Link to="/">Home</Link>";
-
 const Appbar = () => {
         return (
             <Router>
                 <AppBar>
-                    <Heading level='3' margin='none'>My App</Heading>
+                    <Heading level='3' margin='none'><Link to="/">My App</Link></Heading>
+
                     <Box 
                         direction='row'
                         align='center'
                         pad={{ left: 'small', right: 'large', vertical: 'small' }}
                         gap='large'
                     >
-                        <Button label='Portfolio' icon={<Bookmark/>}>
-                            <Link to="/">Portfolio</Link>
-                        </Button>
 
+                        <Link to="/Portolio">Portfolio</Link>
 
-                        <Button
-                            icon={<Clipboard/>}
-                            label='CV'
-                        />
-                </Box>
+                        <Link to="/CV">Mon CV</Link>
+
+                    </Box>
                 </AppBar>
-            </Router>
-            
+
+                <Switch>
+
+                    <Route path="/Portolio">
+                        <Portfolio />
+                    </Route>
+
+                    <Route path="/CV">
+                        <CV />
+                    </Route>
+
+                    <Route path="/">
+                        <Box 
+                        direction='row' 
+                        flex 
+                        overflow={{horizontal:'hidden'}}
+                        align='center'
+                        justify='center'
+                        >
+                            <Home />
+                        </Box>
+                    </Route>
+                    
+                </Switch>
+            </Router>      
         )
 }
 
