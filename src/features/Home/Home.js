@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Box, WorldMap } from 'grommet';
+import { Box, Heading, WorldMap } from 'grommet';
 
 var nomPays = ""; 
 
@@ -86,7 +86,8 @@ const Home = () => {
                     },
                 ]}
             />
-            {!active ? ( <Box margin='medium'>Veuillez cliquer sur une ville</Box>) : ( <Box margin='medium'> {nomPays} </Box> )}
+            {!active ? ( <Box margin='medium'><Heading color="status-warning">Veuillez cliquer sur une ville</Heading></Box>) 
+            : ( <Box margin='medium'> <Heading color="status-warning">{nomPays}</Heading> </Box> )}
         </Box>
     )
 }

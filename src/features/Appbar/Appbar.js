@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Button, Heading } from 'grommet'
-import { Bookmark, Clipboard } from 'grommet-icons'
+import { Bookmark, Cli, Clipboard } from 'grommet-icons'
 import CV from '../CV/CV'
 import Portfolio from '../Portfolio/Portfolio'
 import Home from '../Home/Home'
@@ -17,7 +17,7 @@ const AppBar = (props) => (
         direction='row'
         align='center'
         justify='between'
-        background='brand'
+        background='status-warning'
         pad={{ left: 'medium', right: 'small', vertical: 'small' }}
         elevation='medium'
         style={{ zIndex: '1' }}
@@ -29,7 +29,7 @@ const Appbar = () => {
         return (
             <Router>
                 <AppBar>
-                    <Heading level='3' margin='none'><Link to="/">My App</Link></Heading>
+                    <Heading level='3' margin='none'><Link style={{ textDecoration : 'none', color : 'white' }} to="/">My App</Link></Heading>
 
                     <Box 
                         direction='row'
@@ -38,9 +38,9 @@ const Appbar = () => {
                         gap='large'
                     >
 
-                        <Link to="/Portolio">Portfolio</Link>
+                        <Link style={{ textDecoration : 'none', color : 'white' }} to="/Portolio">Portfolio</Link>
 
-                        <Link to="/CV">Mon CV</Link>
+                        <Link style={{ textDecoration : 'none', color : 'white' }} to="/CV">Mon CV</Link>
 
                     </Box>
                 </AppBar>
@@ -66,7 +66,7 @@ const Appbar = () => {
                             <Home />
                         </Box>
                     </Route>
-                    
+
                 </Switch>
             </Router>      
         )
