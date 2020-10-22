@@ -1,109 +1,156 @@
 import React, {useState} from 'react'
-import { Box, Heading, WorldMap } from 'grommet'
-import Toulouse from './Villes/Toulouse'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-  } from "react-router-dom"
+import { Box, Heading, WorldMap, Collapsible } from 'grommet'
 
-var nomPays = ""; 
+var nomPaysHover = "";
+var nomPaysClick = "";
 
 const Home = () => {
 
     const [active, setActive] = useState();
+    const [showSidebar, setShowSidebar] = useState(false);
 
     return (
-        <Box align='center' pad='large'>
-            <Router>
+
+        <Box
+        fill 
+        direction='row' 
+        flex 
+        overflow={{horizontal:'hidden'}}
+        align='center'
+        justify='center'
+        >
+
+            <Box align='center' justify='center' pad='large'>
+
                 <WorldMap
                     color="dark-1" 
                     places={[
                         {
-                            name: 'Toulouse',
+                            nom: 'Toulouse',
                             location: [39.6044622, 3.4442469],
                             color: 'status-warning',
                             onHover: () => {
-                                nomPays = 'Toulouse';
+                                nomPaysHover = 'Toulouse';
                                 setActive(!active); 
                             },
                             onClick: () => {
-                                // <Switch>
-                                //     <Route path='/Toulouse'>
-                                //         <Toulouse></Toulouse>
-                                //     </Route>
-                                // </Switch>
-                            },
+                                nomPaysClick = 'Toulouse';
+                                setShowSidebar(!showSidebar)
+                            }
                         },
                         {
-                            name: 'Paris',
+                            nom: 'Paris',
                             location: [43.8566969, 4.3514616],
                             color: 'status-warning',
                             onHover: () => {
-                                nomPays = 'Paris';
+                                nomPaysHover = 'Paris';
                                 setActive(!active); 
                             },
+                            onClick: () => {
+                                nomPaysClick = 'Paris';
+                                setShowSidebar(!showSidebar)
+                            }
                         },
                         {
-                            name: 'Montréal',
+                            nom: 'Montréal',
                             location: [46.4972159, -73.6103642],
                             color: 'status-warning',
                             onHover: () => {
-                                nomPays = 'Montréal';
+                                nomPaysHover = 'Montréal';
                                 setActive(!active); 
                             },
+                            onClick: () => {
+                                nomPaysClick = 'Montréal';
+                                setShowSidebar(!showSidebar)
+                            }
                         },
                         {
-                            name: 'Boston',
+                            nom: 'Boston',
                             location: [41.3602534, -71.0582912],
                             color: 'status-warning',
                             onHover: () => {
-                                nomPays = 'Boston';
+                                nomPaysHover = 'Boston';
                                 setActive(!active); 
                             },
+                            onClick: () => {
+                                nomPaysClick = 'Boston';
+                                setShowSidebar(!showSidebar)
+                            }
                         },
                         {
-                            name: 'Nouvelle Orléans',
+                            nom: 'Nouvelle Orléans',
                             location: [29.9499323, -90.0701156],
                             color: 'status-warning',
                             onHover: () => {
-                                nomPays = 'Nouvelle Orléans';
+                                nomPaysHover = 'Nouvelle Orléans';
                                 setActive(!active); 
                             },
+                            onClick: () => {
+                                nomPaysClick = 'Nouvelle Orléans';
+                                setShowSidebar(!showSidebar)
+                            }
                         },
                         {
-                            name: 'Athènes',
+                            nom: 'Athènes',
                             location: [37.9839412, 23.7283052],
                             color: 'status-warning',
                             onHover: () => {
-                                nomPays = 'Athènes';
+                                nomPaysHover = 'Athènes';
                                 setActive(!active); 
                             },
+                            onClick: () => {
+                                nomPaysClick = 'Athènes';
+                                setShowSidebar(!showSidebar)
+                            }
                         },
                         {
-                            name: 'Atlanta',
+                            nom: 'Atlanta',
                             location: [33.7490987, -84.3901849],
                             color: 'status-warning',
                             onHover: () => {
-                                nomPays = 'Atlanta';
+                                nomPaysHover = 'Atlanta';
                                 setActive(!active); 
                             },
+                            onClick: () => {
+                                nomPaysClick = 'Atlanta';
+                                setShowSidebar(!showSidebar)
+                            }
                         },
                         {
-                            name: 'Zagreb',
+                            nom: 'Zagreb',
                             location: [45.8131847, 15.9771774],
                             color: 'status-warning',
                             onHover: () => {
-                                nomPays = 'Zagreb';
+                                nomPaysHover = 'Zagreb';
                                 setActive(!active); 
                             },
+                            onClick: () => {
+                                nomPaysClick = 'Zagreb';
+                                setShowSidebar(!showSidebar)
+                            }
                         },
                     ]}
                 />
                 {!active ? ( <Box margin='medium'><Heading color="status-warning">Veuillez cliquer sur une ville</Heading></Box>) 
-                : ( <Box margin='medium'> <Heading color="status-warning">{nomPays}</Heading> </Box> )}
-            </Router>
+                : ( <Box margin='medium'> <Heading color="status-warning">{nomPaysHover}</Heading> </Box> )}
+            </Box>
+            
+            <Collapsible direction='horizontal' open={showSidebar}>
+                <Box
+                flex
+                background='light-2' 
+                elevation='small' 
+                align='center' 
+                justify='center'
+                >
+                    <Heading align='center' justify='center'> {nomPaysClick} </Heading>
+                    <Box align='center' justify='center'>
+
+                    </Box>
+                </Box>
+            </Collapsible>
         </Box>
+        
     )
 }
 

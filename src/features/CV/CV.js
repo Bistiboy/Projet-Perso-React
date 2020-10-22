@@ -1,6 +1,5 @@
 import React from 'react'
-import { Button, Box, Card, CardBody, CardFooter, CardHeader, Meter, Text} from 'grommet';
-import { Favorite, ShareOption } from 'grommet-icons';
+import { Box, Meter, Text} from 'grommet';
 import data from './data.json';
 
 const CV = () => {

@@ -1,6 +1,5 @@
 import React from 'react'
-import { Box, Button, Heading } from 'grommet'
-import { Bookmark, Cli, Clipboard } from 'grommet-icons'
+import { Box, Heading } from 'grommet'
 import CV from '../CV/CV'
 import Portfolio from '../Portfolio/Portfolio'
 import Home from '../Home/Home'
@@ -47,15 +46,7 @@ const Appbar = () => {
 
                 <Switch>
                     <Route exact path="/">
-                        <Box 
-                        direction='row' 
-                        flex 
-                        overflow={{horizontal:'hidden'}}
-                        align='center'
-                        justify='center'
-                        >
-                            <Home />
-                        </Box>
+                        <Home />
                     </Route>
 
                     <Route path="/Portolio">

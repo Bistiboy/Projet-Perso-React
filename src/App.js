@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Grommet, Image} from 'grommet';
-import Home from './features/Home/Home'
+import { Box, Grommet} from 'grommet';
 import Appbar from './features/Appbar/Appbar';
 
 const theme = {

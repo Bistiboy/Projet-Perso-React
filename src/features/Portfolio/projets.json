@@ -1,0 +1,17 @@
+[
+    {
+        "nom" : "Jeu de Plateforme 2D - Projet Perso",
+        "description" : "Jeu développé en C# sur UNITY",
+        "image" : "Jeu2D.PNG"
+    },
+    {
+        "nom" : "Blog de Voyage - Projet Perso",
+        "description" : "Création d'un blog de voyage développé avec Angular, ce blog est en cours de production",
+        "image" : ""
+    },
+    {
+        "nom" : "Gestion d'un site e-commerce - STAGE",
+        "description" : "Site e-commerce, géré avec Prestashop. Principalement développé en PHP via les templates Smarty et Twig",
+        "image" : ""
+    }
+]
