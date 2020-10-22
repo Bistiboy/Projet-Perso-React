@@ -1,0 +1,14 @@
+[
+    {
+        "nom" : "HTML",
+        "valeur" : "80"
+    },
+    {
+        "nom" : "CSS",
+        "valeur" : "50"
+    },
+    {
+        "nom" : "JS",
+        "valeur" : "75"
+    }
+]

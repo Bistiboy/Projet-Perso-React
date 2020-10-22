@@ -1,25 +1,34 @@
 import React from 'react'
-import { Button, Box, Card, CardBody, CardFooter, CardHeader} from 'grommet';
+import { Button, Box, Card, CardBody, CardFooter, CardHeader, Meter, Text} from 'grommet';
 import { Favorite, ShareOption } from 'grommet-icons';
-import data from '../../data.json';
+import data from './data.json';
 
 const CV = () => {
     return (
-        data.map((user) => 
-            <Box flex align="center" pad={{top:'large'}}>
-                <Card height="small" width="small" background="light-1">
-                    <CardHeader pad="medium">{user.name}</CardHeader>
-                    <CardBody pad="medium">{user.descritpion}</CardBody>
-                    <CardFooter pad={{horizontal: "small"}} background="light-2">   
-                    <Button
-                    icon={<Favorite color="red" />}
-                    hoverIndicator
-                    />
-                    <Button icon={<ShareOption color="plain" href={user.url}/>} hoverIndicator />
-                    </CardFooter>
-                </Card>
+        <Box flex justify="center" pad="medium" gap="xlarge" direction="row">
+            {data.map((comp) => 
+                <Box align="center">
+                <Box direction="row" align="center" pad={{ bottom: 'xsmall' }}>
+                    <Text size="large" weight="bold">
+                    {comp.nom}
+                    </Text>
+                </Box>
+                <Meter
+                    type="circle"
+                    background="light-2"
+                    values={[{ value: comp.valeur, color:'status-warning' }]}
+                    size="xsmall"
+                    thickness="small"
+                />
+                <Box direction="row" align="center" pad={{ bottom: 'xsmall' }}>
+                    <Text size="xlarge" weight="bold">
+                    {comp.valeur}
+                    </Text>
+                    <Text size="small">%</Text>
+                </Box>
             </Box>
-        )
+         )}
+        </Box>
     )
 }
 

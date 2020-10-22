@@ -38,24 +38,15 @@ const Appbar = () => {
                         gap='large'
                     >
 
-                        <Link style={{ textDecoration : 'none', color : 'white' }} to="/Portolio">Portfolio</Link>
+                        <Link style={{ textDecoration : 'none', color : 'white' }} to="/Portolio">PORTFOLIO</Link>
 
-                        <Link style={{ textDecoration : 'none', color : 'white' }} to="/CV">Mon CV</Link>
+                        <Link style={{ textDecoration : 'none', color : 'white' }} to="/CV">MON CV</Link>
 
                     </Box>
                 </AppBar>
 
                 <Switch>
-
-                    <Route path="/Portolio">
-                        <Portfolio />
-                    </Route>
-
-                    <Route path="/CV">
-                        <CV />
-                    </Route>
-
-                    <Route path="/">
+                    <Route exact path="/">
                         <Box 
                         direction='row' 
                         flex 
@@ -67,6 +58,13 @@ const Appbar = () => {
                         </Box>
                     </Route>
 
+                    <Route path="/Portolio">
+                        <Portfolio />
+                    </Route>
+
+                    <Route path="/CV">
+                        <CV />
+                    </Route>
                 </Switch>
             </Router>      
         )
